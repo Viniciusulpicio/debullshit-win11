@@ -109,16 +109,17 @@ function Disable-TelemetryAndDistractions {
 
     Write-Output "Desativando tarefas agendadas de telemetria e manutenção..."
     $scheduledTasks = @(
-        "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser",
-        "\Microsoft\Windows\Application Experience\ProgramDataUpdater",
-        "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator",
-        "\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask",
-        "\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip",
-        "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector",
-        "\Microsoft\Windows\Windows Error Reporting\QueueReporting"
+        @{ Path = "\Microsoft\Windows\Application Experience\"; Name = "Microsoft Compatibility Appraiser" },
+        @{ Path = "\Microsoft\Windows\Application Experience\"; Name = "ProgramDataUpdater" },
+        @{ Path = "\Microsoft\Windows\Customer Experience Improvement Program\"; Name = "Consolidator" },
+        @{ Path = "\Microsoft\Windows\Customer Experience Improvement Program\"; Name = "KernelCeipTask" },
+        @{ Path = "\Microsoft\Windows\Customer Experience Improvement Program\"; Name = "UsbCeip" },
+        @{ Path = "\Microsoft\Windows\DiskDiagnostic\"; Name = "Microsoft-Windows-DiskDiagnosticDataCollector" },
+        @{ Path = "\Microsoft\Windows\Windows Error Reporting\"; Name = "QueueReporting" }
     )
+    
     foreach ($task in $scheduledTasks) {
-        Disable-ScheduledTask -TaskPath $task -ErrorAction SilentlyContinue
+        Disable-ScheduledTask -TaskPath $task.Path -TaskName $task.Name -ErrorAction SilentlyContinue
     }
 }
 
@@ -310,4 +311,5 @@ $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
 # Finaliza o logging
 if (Get-Transcript) {
     Stop-Transcript
+
 }

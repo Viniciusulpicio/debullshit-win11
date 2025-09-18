@@ -1,4 +1,4 @@
-# Win11 Ultimate Gaming Tweak Suite v2.1
+# Win11 optimize
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
@@ -7,7 +7,7 @@ Uma suíte de otimização interativa em PowerShell para o Windows 11, focada em
 
 ## Sobre o Projeto
 
-Este projeto nasceu da necessidade de gamers e power users que desejam extrair o máximo de desempenho de suas máquinas. Ele automatiza dezenas de otimizações que normalmente exigiriam horas de configuração manual.
+Este projeto nasceu da necessidade de users que desejam extrair o máximo de desempenho de suas máquinas. Ele automatiza dezenas de otimizações que normalmente exigiriam horas de configuração manual.
 
 Na **versão 2.1**, o script evoluiu de uma ferramenta de execução única para uma **suíte interativa completa**. A filosofia continua simples: desativar ou remover tudo que não contribui diretamente para a performance. A diferença é que agora **você está no controle**, decidindo exatamente o que será alterado, com mais segurança e transparência.
 
@@ -17,7 +17,7 @@ Na **versão 2.1**, o script evoluiu de uma ferramenta de execução única para
 
 Este é um script de nível **AVANÇADO**. Ele realiza alterações profundas no sistema operacional.
 
-- **USE POR SUA CONTA E RISCO.** Não nos responsabilizamos por qualquer problema que possa ocorrer.
+- **USE POR SUA CONTA E RISCO.** Não me responsabilizo por qualquer problema que possa ocorrer.
 - **PRINCIPAL REDE DE SEGURANÇA:** O script cria um **Ponto de Restauração do Sistema** no início. Tenha certeza de que ele foi criado com sucesso antes de prosseguir.
 - **SAÍDA RÁPIDA:** A versão 2.1 inclui um **gerador de script de reversão** para a maioria das configurações, oferecendo uma segunda camada de segurança.
 - **NÃO É PARA TODOS:** Se você usa intensivamente o ecossistema da Microsoft (OneDrive, Office Hub, etc.) ou depende de funcionalidades específicas que o script remove, use as opções do menu para aplicar apenas os tweaks que desejar.
@@ -98,4 +98,5 @@ Este projeto está sob a licença MIT.
 
 ## Agradecimentos
 - À comunidade de power users do Windows.
+
 - Aos criadores de scripts de otimização que pavimentaram o caminho.
